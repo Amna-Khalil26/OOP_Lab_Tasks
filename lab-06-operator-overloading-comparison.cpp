@@ -10,8 +10,7 @@ public:
         amount = a;
     }
 
-    // Overload ==
-    bool operator == (Bill b) {
+    bool operator==(const Bill& b) {
         return amount == b.amount;
     }
 
@@ -25,18 +24,14 @@ int main() {
     Bill b2(500);
     Bill b3(700);
 
-    cout << "\n--- Bill 1 ---\n";
     b1.display();
-
-    cout << "\n--- Bill 2 ---\n";
     b2.display();
 
     if (b1 == b2)
-        cout << "Bill 1 and Bill 2 are EQUAL\n";
+        cout << "Bills are equal" << endl;
     else
-        cout << "Bills are DIFFERENT\n";
+        cout << "Bills are different" << endl;
 
-    cout << "\n--- Bill 3 ---\n";
     b3.display();
 
     return 0;
